@@ -13,10 +13,10 @@
     />
   </head>
   <body>
-    <div class="container">
+    <div id="progress-unit" class="progress-unit">
       <div class="progress-block">
-        <div class="title">Progress</div>
-        <svg class="progress-ring" width="180" height="180">
+        <div class="progress-block__title">Progress</div>
+        <svg class="progress-block__ring" width="180" height="180">
           <circle
             stroke="#EEF3F6"
             stroke-width="15"
@@ -37,18 +37,18 @@
         </svg>
       </div>
 
-      <div class="controls">
-        <div class="wrapper-value">
-          <div class="value">
+      <div class="progress-states">
+        <div class="progress-wrappervalue">
+          <div class="progress-value">
             <input
-              id="value-input"
-              class="value-input"
+              id="progress-value__input"
+              class="progress-value__input"
               type="number"
               min=0
               max=100
               value=0
             />
-            <label for="value-input">Value</label>
+            <label for="value-input" class="progress-value_label">Value</label>
           </div>
           <div class="form-check form-switch">
             <input
