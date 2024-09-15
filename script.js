@@ -39,6 +39,7 @@ animateCheckbox.addEventListener("change", (e) => {
         setProgress(100);
         return;
       } else {
+        currentValue = (isNaN(currentValue)) ? 0 : currentValue;
         valueInput.value = currentValue;
         setProgress(currentValue);
       }
