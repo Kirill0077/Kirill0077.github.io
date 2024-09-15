@@ -1,0 +1,55 @@
+.container {
+  position: relative;
+  width: 100svw;
+  height: 100svh;
+  border-color: aqua;
+  display: grid;
+  @media (orientation: landscape) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @media (orientation: portrait) {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+  justify-content: stretch;
+  align-items: stretch;
+}
+
+.title {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+}
+
+.progress-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.controls {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper-value {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.value-input {
+  border-radius: 1rem;
+  width: 40px;
+  max-width: 40px;
+  text-align: center;
+}
+
+.progress-ring {
+  transform: rotate(-90deg); /* Поворот, чтобы прогресс начинался с 12 часов */
+}
+
+.progress-ring__circle {
+  transition: stroke-dashoffset 0.35s;
+}
