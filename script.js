@@ -9,13 +9,15 @@ const radius = circle.r.baseVal.value;
 const lenghtCircle = 2 * Math.PI * radius;
 let animationInterval;
 
-circle.style.strokeDasharray = `${lenghtCircle} ${lenghtCircle}`;
+circle.style.strokeDasharray = `${lenghtCircle} ${lenghtCircle} `;
 circle.style.strokedashoffset = `${lenghtCircle}`;
 
 function setProgress(percent) {
   const offset = lenghtCircle - (percent / 100) * lenghtCircle;
   circle.style.strokeDashoffset = offset;
 }
+
+setProgress(0);
 
 valueInput.addEventListener("input", function () {
   const value = parseInt(this.value, 10);
